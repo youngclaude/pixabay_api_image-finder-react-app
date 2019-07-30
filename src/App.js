@@ -10,7 +10,7 @@ class App extends Component {
    render() {
        return (
            <MuiThemeProvider>
-               <div>
+               <div >
                    <NavBar/>
                    <Search />
                </div>
