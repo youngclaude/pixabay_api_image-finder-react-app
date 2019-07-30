@@ -17,12 +17,20 @@ class Search extends Component {
     }
 
     onChange = (e) => {
-        this.setState({ searchText: e.target.value });
+        let val = e.target.value;
+        this.setState({ searchText: val });
 
-        axios.get(`${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchText}&image_type=photo&per_page=${this.state.amount}`)
+        // Ensurring that clearing the text value clears the array value else fetch data
+        if (val !== ""){
+            axios.get(`${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchText}&image_type=photo&per_page=${this.state.amount}`)
             //.then(results => console.log(results)) -- Proved a successful response
-            .then(results => this.setState({images: results.data.hits}))
-            .catch(error => console.log(error))
+                .then(results => this.setState({images: results.data.hits}))
+                .catch(error => console.log(error))
+
+        } else {
+            this.setState({index:[]});
+        }
+
     }
 
     onAmountChange = (e, index, value) =>{
