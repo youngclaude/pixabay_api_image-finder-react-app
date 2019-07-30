@@ -4,6 +4,7 @@ url: http://pixbay-api-image-search-by-rene-c.s3-website.us-east-2.amazonaws.com
 
 ### Details
 In this project I leverage the PixbayImageAPI to enable search reasults to appear is a dynamic grid-list
+![Pixabay-Image-Finder-Google-Chrome-7_30_2019-9_28_15-AM](https://user-images.githubusercontent.com/15623401/62133888-99be9080-b2ad-11e9-95da-e4d9089b0b78.gif)
 
 ## Lessons Learned/ Technologies used
 1. React JS
